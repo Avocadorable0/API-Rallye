@@ -1,9 +1,13 @@
 const express = require("express");
+const cors = require('cors');
 const {connect} = require("./Config/database");
 const voitureRoute = require("./Routes/voitureRoute");
 
 const app = express();
+app.use(cors());
 const port = 3000;
+
+
 
 connect();
 

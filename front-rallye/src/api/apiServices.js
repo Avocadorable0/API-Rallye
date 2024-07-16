@@ -1,9 +1,9 @@
 import axios from 'axios';
-
+const apiBaseUrl = 'http://localhost:3000';
 const apiSetvices = {
     addVoiture: async (data) => {
         try {
-            const rep = await axios.post('localhost:3000/api/addVoiture',data);
+            const rep = await axios.post(`${apiBaseUrl}/api/addVoiture`,data);
             return rep.data;
         } catch (error) {
             console.log('Erreur lors de l\'ajout',error );
@@ -14,7 +14,7 @@ const apiSetvices = {
 
     getVoitures: async () => {
         try {
-            const rep = await axios.get('localhost:3000/api/voitures');
+            const rep = await axios.get(`${apiBaseUrl}/api/voitures`);
             return rep.data;
         } catch (error) {
             console.log('Erreur sur getAll', error);
@@ -25,7 +25,7 @@ const apiSetvices = {
 
     updateVoiture: async (id,data) => {
         try {
-            const rep = await axios.put(`localhost:3000/api/updateVoiture/${id}`,data);
+            const rep = await axios.put(`${apiBaseUrl}/api/updateVoiture/${id}`,data);
             return rep.data;
         } catch (error) {
             console.log('Erreur sur update',error);
@@ -36,7 +36,7 @@ const apiSetvices = {
 
     deleteVoiture: async (id) => {
         try {
-            const rep = await axios.delete(`localhost:3000/api/deleteVoiture/${id}`);
+            const rep = await axios.delete(`${apiBaseUrl}/api/deleteVoiture/${id}`);
             return rep.data;
         } catch (error) {
             console.log('Erreur sur delete',error);
@@ -47,7 +47,7 @@ const apiSetvices = {
 
     getVoitureById: async (id)=>{
         try {
-            const rep = await axios.get(`localhost:3000/api/voitureById/${id}`);
+            const rep = await axios.get(`${apiBaseUrl}/api/voitureById/${id}`);
             return rep.data;
         } catch (error) {
             console.log('Erreur sur ById',error);

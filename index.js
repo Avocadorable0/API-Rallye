@@ -17,7 +17,7 @@ app.use('/api',voitureRoute);
 const {seq} = require("./Config/database");
 seq.sync().then(() =>{
     app.listen(port, ()=>{
-        console.log(`Application demarré sur lee port: ${port}`);
+        console.log(`Application demarré sur le port: ${port}`);
     })
 }).catch((error)=>{
     console.log('Erreur lors du demarage: ',error);

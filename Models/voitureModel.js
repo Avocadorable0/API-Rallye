@@ -27,15 +27,15 @@ class Voiture{
         },
         marquevoiture: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         puissancevoiture: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: false
         },
         systemevoiture: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         numerovoiture: {
             type: DataTypes.STRING,
@@ -43,7 +43,7 @@ class Voiture{
         },
     },{
         tableName: 'voiture',
-        timestamps: false,
+        timestamps: false
     });
     
 module.exports = {Voiture, voitureModel};
